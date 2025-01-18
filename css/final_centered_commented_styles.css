@@ -1,0 +1,754 @@
+
+/* === Основные стили === */
+/* Установка общего фона и базового выравнивания страницы */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); 
+    transition: background 0.5s ease-in-out; 
+}
+.background-buttons {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+.bg-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+
+
+/* === Стили кнопок === */
+/* Стили для всех кнопок: фон, шрифт и эффект нажатия */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.bg-button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.gradient1 {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+.gradient2 {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+.gradient3 {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+.gradient4 {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+.gradient5 {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+}
+.gradient6 {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+}
+.style1 .cat {
+    background: linear-gradient(to bottom, #4a4a4a, #000);
+}
+.style2 .cat {
+    background: linear-gradient(to bottom, #f06, #800);
+}
+.style3 .cat {
+    background: linear-gradient(to bottom, #ff9a00, #ff3b00);
+}
+.style4 .cat {
+    background: linear-gradient(to bottom, #2e8b57, #006400);
+}
+.style5 .cat {
+    background: linear-gradient(to bottom, #1e90ff, #0000cd);
+}
+.all-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+}
+
+.buttons-container, .background-buttons, .style-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttons-container {
+    margin-bottom: 10px;
+}
+
+.background-buttons {
+    margin-bottom: 10px;
+}
+
+.style-buttons-container {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .all-buttons-container {
+        gap: 15px;
+    }
+
+    .buttons-container, .background-buttons, .style-buttons-container {
+
+
+/* === Анимации === */
+/* Определение анимаций для ушей, зрачков и рта кота */
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .action-button, .bg-button {
+        width: 80%;
+        max-width: 250px;
+    }
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.cat-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    perspective: 800px;
+ 
+}
+.cat {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #4a4a4a, #000);
+    border-radius: 50%;
+
+
+/* === Мобильная версия === */
+/* Стили и адаптация для экранов шириной до 600px */
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.3), 5px 5px 15px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+}
+.ears-container {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: -1;
+}
+.ears-container .ear {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(to bottom, #4a4a4a, #2a2a2a);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: earMove 3s infinite;
+    transform-origin: bottom center;
+    overflow: hidden; 
+}
+.ears-container .ear::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit; 
+    border-radius: 30%; 
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.ears-container .ear.left {
+    left: 20px;
+    transform: rotate(-20deg);
+}
+.ears-container .ear.right {
+    right: 20px;
+    transform: rotate(20deg);
+}
+@keyframes earMove {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+/* Контейнер для бровей */
+.cat .brows {
+    position: absolute;
+    top: 40px; /* Расположение выше глаз */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Ширина контейнера */
+    height: 20px;
+    z-index: 2; /* Выше глаз */
+}
+
+/* Левая бровь */
+.cat .brows .left {
+    position: absolute;
+    top: 0;
+    left: -5px; /* Точное размещение над левым глазом */
+    width: 40px;
+    height: 3.7px; /* Толщина брови */
+    background: #fff; /* Белый цвет брови */
+    border-radius: 2px; /* Закруглённые края */
+    transform-origin: left center;
+    animation: browMoveLeft 5s infinite ease-in-out;
+}
+
+/* Правая бровь */
+.cat .brows .right {
+    position: absolute;
+    top: 0;
+    right: 5px; /* Точное размещение над правым глазом */
+    width: 40px;
+    height: 3.7px; /* Толщина брови */
+    background: #fff; /* Белый цвет брови */
+    border-radius: 2px; /* Закруглённые края */
+    transform-origin: right center;
+    animation: browMoveRight 5s infinite ease-in-out;
+}
+
+/* Анимация левой брови */
+@keyframes browMoveLeft {
+    0%, 100% {
+        transform: rotate(0deg); /* Нейтральное положение */
+    }
+    50% {
+        transform: rotate(-15deg); /* Лёгкий наклон вниз */
+    }
+}
+
+/* Анимация правой брови */
+@keyframes browMoveRight {
+    0%, 100% {
+        transform: rotate(0deg); /* Нейтральное положение */
+    }
+    50% {
+        transform: rotate(15deg); /* Лёгкий наклон вниз */
+    }
+}
+/* Глаза кота */
+.cat .eye {
+    position: absolute;
+    top: 60px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #fff, #ccc);
+    border-radius: 50%;
+    overflow: hidden;
+    clip-path: circle(50% at 50% 50%);
+    animation: blink 5s infinite; /* Регулярное моргание */
+}
+
+/* Левый глаз */
+.cat .eye.left {
+    left: 40px;
+}
+
+/* Правый глаз */
+.cat .eye.right {
+    right: 40px;
+}
+
+/* Зрачки */
+.cat .pupil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #000, #333);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Анимация моргания с полным закрытием */
+@keyframes blink {
+    0%, 95% {
+        height: 40px; /* Открытые глаза */
+    }
+    96% {
+        height: 2px; /* Полностью закрытые глаза */
+    }
+    100% {
+        height: 40px; /* Открытые глаза */
+    }
+}
+/* Общий контейнер для усов */
+.cat .whiskers {
+    position: absolute;
+    top: 105px; /* Смещаем ближе к носу */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px; /* Общая ширина контейнера для усов */
+    height: 40px; /* Высота контейнера */
+    z-index: 1; /* Под носом */
+}
+
+/* Левые усы */
+.cat .whiskers .left {
+    position: absolute;
+    left: 0; /* Левые усы начинаются с левого края */
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background: #fff; /* Белый цвет усов */
+    transform-origin: right center;
+}
+
+/* Углы левых усов */
+.cat .whiskers .left:nth-child(1) {
+    transform: rotate(20deg); /* Верхний ус */
+}
+.cat .whiskers .left:nth-child(2) {
+    transform: rotate(0deg); /* Средний ус */
+}
+.cat .whiskers .left:nth-child(3) {
+    transform: rotate(-20deg); /* Нижний ус */
+}
+
+/* Правые усы */
+.cat .whiskers .right {
+    position: absolute;
+    right: 0; /* Правые усы начинаются с правого края */
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background: #fff; /* Белый цвет усов */
+    transform-origin: left center;
+}
+
+/* Углы правых усов */
+.cat .whiskers .right:nth-child(4) {
+    transform: rotate(-20deg); /* Верхний ус */
+}
+.cat .whiskers .right:nth-child(5) {
+    transform: rotate(0deg); /* Средний ус */
+}
+.cat .whiskers .right:nth-child(6) {
+    transform: rotate(20deg); /* Нижний ус */
+}
+
+.cat .nose {
+    position: absolute;
+    top: 110px; /* Расположение носа */
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg); /* Поворот для сердечка */
+    width: 20px;
+    height: 18px;
+    background: linear-gradient(145deg, #e07a7a, #d06); /* Градиент для объёма */
+    clip-path: path('M10,0 C10,8 0,8 0,16 Q10,24 20,16 C20,8 10,8 10,0 Z'); /* Сердечко */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3), inset 0px -2px 4px rgba(0, 0, 0, 0.2); /* Тени */
+    position: relative;
+    z-index: 2;
+}
+
+.cat .nose::before {
+    content: '';
+    position: absolute;
+    top: 15%; /* Расположение центральной линии */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px; /* Увеличена ширина линии */
+    height: 10px; /* Длина линии */
+    background: #3e2424; /* Цвет центральной линии */
+    border-radius: 1px; /* Округлённые края */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); /* Лёгкая тень для объёма */
+}
+/* Базовый рот (закрытый) */
+.cat .mouth {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px; /* Узкий рот */
+    height: 10px; /* Почти закрыт */
+    background: #d06;
+    border-radius: 50%; /* Овальная форма для губ */
+    overflow: hidden; /* Прячем язык */
+    transition: height 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
+}
+
+/* Язык внутри рта (скрыт по умолчанию) */
+.cat .tongue {
+    position: absolute;
+    bottom: -10px; /* Полностью скрыт */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    background: #f89;
+    border-radius: 50%;
+    transition: transform 0.3s ease, bottom 0.3s ease;
+}
+
+/* Разговаривающий рот */
+.cat.talking .mouth {
+    width: 50px; /* Расширяется при разговоре */
+    height: 30px; /* Открывается шире */
+    border-radius: 50% / 100%; /* Становится овальным */
+    animation: dynamicMouthTalk 0.8s infinite; /* Динамическое движение губ */
+}
+
+/* Анимация языка */
+.cat.talking .tongue {
+    bottom: 0; /* Язык выходит наружу */
+    animation: dynamicTongueTalk 0.8s infinite; /* Движение языка */
+}
+
+/* Ключевые кадры для динамического движения рта */
+@keyframes dynamicMouthTalk {
+    0%, 100% {
+        width: 50px; /* Среднее положение */
+        height: 20px; /* Полуоткрытый рот */
+        border-radius: 50% / 80%; /* Естественная форма */
+    }
+    50% {
+        width: 40px; /* Узкое сужение */
+        height: 30px; /* Сильное открытие */
+        border-radius: 50% / 100%; /* Сильная овальная форма */
+    }
+}
+
+/* Ключевые кадры для языка */
+@keyframes dynamicTongueTalk {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0); /* Язык в нейтральной позиции */
+    }
+    50% {
+        transform: translateX(-50%) translateY(-2px); /* Лёгкое движение вверх */
+    }
+}
+.speech-bubble {
+    position: absolute;
+    bottom: 220px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px; 
+    padding: 15px; 
+    background: linear-gradient(135deg, #fff, #f0f0f0); 
+    border: 2px solid #ccc; 
+    border-radius: 20px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; 
+    display: none; 
+    animation: fadeIn 0.5s ease-in-out; 
+}
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 15px;
+    border-style: solid;
+    border-color: #f0f0f0 transparent transparent transparent; 
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+body {
+    background: linear-gradient(90deg, #00C9FF, #92FE9D); 
+}
+.buttons-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px; 
+}
+.action-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.action-button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.cat .pupil {
+    clip-path: circle(50% at 50% 50%); 
+    transition: transform 0.1s ease-out;
+}
+.cat-container.active .mouth {
+    width: 50px;
+    height: 20px;
+}
+@keyframes secondAnimation {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+.cat.second-animation {
+    animation: secondAnimation 2s ease-in-out;
+}
+.version-container {
+    position: absolute;
+    top: 10%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: rgba(0, 0, 0, 0.6); 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 10; 
+}
+@media (max-width: 600px) {
+    .all-buttons-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .buttons-container, .background-buttons, .style-buttons-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(80px, 1fr));
+        gap: 10px;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .action-button, .bg-button {
+        width: 90%;
+        max-width: 120px;
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* Центрирование кота для десктопной версии */
+@media (min-width: 601px) {
+    .cat-container {
+        margin: 0 auto; /* Горизонтальное центрирование */
+        position: relative;
+    }
+}
+/* Общий стиль для страницы */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #333); /* Тёмный фон по умолчанию */
+    color: #f5f5f5;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Светлый режим */
+body.light-mode {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0); /* Светлый фон */
+    color: #000;
+}
+
+/* Навбар */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8); /* Тёмный навбар по умолчанию */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center; /* Центрирование содержимого навбара */
+    align-items: center;
+    z-index: 1000;
+    transition: background 0.5s ease;
+}
+
+/* Светлый режим для навбара */
+body.light-mode nav {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Содержимое навбара */
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Расстояние между элементами */
+}
+
+/* Версия сайта */
+.version-container {
+    font-size: 16px;
+    font-weight: bold;
+    color: inherit;
+}
+
+/* Контейнер для иконки */
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Иконка переключения */
+.nav-icon {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Контейнер для лапки */
+.paw-container {
+    position: absolute;
+    bottom: 50%;
+    left: 75%; /* Регулируйте позицию */
+    transform: translate(-50%, 50%);
+}
+/* Лапка */
+.paw {
+    position: absolute;
+    bottom: -5%; /* Положение лапки */
+    right: -30%; /* Сдвиг вправо */
+    width: 100px; /* Уменьшенный размер */
+    height: 120px; /* Уменьшенный размер */
+    border-radius: 50%; /* Овальная форма */
+    z-index: 10;
+    animation: wave 2s infinite ease-in-out; /* Анимация махания */
+}
+
+/* Анимация появления */
+.paw.show {
+    opacity: 1; /* Появление */
+    transform: scale(1); /* Увеличение до нормального размера */
+}
+
+/* Анимация исчезновения */
+.paw.hide {
+    opacity: 0; /* Исчезновение */
+    transform: scale(0.5); /* Уменьшение */
+}
+
+/* Центральная подушечка (овал) */
+.pad {
+    position: absolute;
+    bottom: 15px; /* Пропорционально уменьшено */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55px; /* Уменьшенный размер */
+    height: 55px; /* Уменьшенный размер */
+    background: linear-gradient(145deg, #ffffff, #bfbfbf); /* 3D эффект с градиентом */
+    border-radius: 50%; /* Овальная форма */
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3), inset -3px -3px 6px rgba(255, 255, 255, 0.6); /* Внутренний 3D эффект */
+}
+
+/* Пальцы */
+.toe {
+    position: absolute;
+    width: 30px; /* Уменьшенный размер */
+    height: 35px; /* Уменьшенный размер */
+    background: linear-gradient(145deg, #ffffff, #bfbfbf); /* 3D эффект с градиентом */
+    border-radius: 50%;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3), inset -3px -3px 6px rgba(255, 255, 255, 0.6); /* Внутренний 3D эффект */
+    top: 3px; /* Пропорционально уменьшено */
+}
+
+/* Расположение пальцев */
+.toe-1 {
+    top: 30%; /* Пропорционально уменьшено */
+    left: 15px; /* Пропорционально уменьшено */
+}
+.toe-2 {
+    top: 18%; /* Пропорционально уменьшено */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.toe-3 {
+    top: 30%; /* Пропорционально уменьшено */
+    right: 15px; /* Пропорционально уменьшено */
+}
+
+/* Анимация махания */
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
