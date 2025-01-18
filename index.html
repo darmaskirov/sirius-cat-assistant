@@ -5,20 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SiriusCat <script>{version}</script></title>
-    <link rel="stylesheet" href="css/final_centered_commented_styles.css"> <!-- Подключаем CSS -->
-    <link rel="stylesheet" href="css/updated_styles.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Подключаем CSS -->
 </head>
 <body>
     <!-- Навигационная панель -->
     <nav>
-        <div class="icon-container">
-            <!-- Иконка для переключения тем -->
-            <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Switch Theme" id="theme-icon" class="nav-icon">
-        </div>
+
     </nav>
-    <div class="version-container">
-        <span id="site-version"></span>
-    </div>
+
+
     <!-- Контейнер для кота -->
     <div class="cat-container" id="cat-container">
         <div class="ears-container">
@@ -94,11 +89,18 @@
 
     <div class="all-buttons-container">
         <div class="buttons-container">
-            <button id="talk-button" class="action-button">Разговаривать</button>
-            <button id="animation-button" class="action-button">Анимация</button>
-            <button id="say-something-button" class="action-button">Скажи что-нибудь</button>
+            <div class="icon-container">
+                <!-- Иконка для переключения тем -->
+                <button alt="Switch Theme" id="theme-icon" class="action-button">Змінити тему</button>
+            </div>
+            <button id="talk-button" class="action-button">Розмовляти</button>
+            <button id="animation-button" class="action-button">Анімація</button>
+            <button id="say-something-button" class="action-button">Сказати що небудь</button>
              <!-- Кнопка для появления лапки -->
-            <button id="showPawButton" class="action-button">Показать лапку</button>
+            <button id="showPawButton" class="action-button">Помахати лапкою</button>
+            <div class="version-container">
+                <span id="site-version"></span>
+            </div>
         </div>
         <br>
         <!--<div class="background-buttons">

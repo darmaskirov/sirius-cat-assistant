@@ -52,14 +52,14 @@ saySomethingButton.addEventListener('click', () => {
 });
 
 // Указываем версию сайта, тайтл и ссылку на иконку
-const version = "v1.2.5";
+const version = "v1.2.5a";
 const siteTitle = "SiriusCat";
 const faviconURL = "https://cdn-icons-png.flaticon.com/512/25/25694.png"; // Ссылка на иконку кота
 
 // Устанавливаем версию на странице
 const versionContainer = document.getElementById('site-version');
 if (versionContainer) {
-    versionContainer.textContent = `Версия: ${version}`;
+    versionContainer.textContent = `Версія: ${version}`;
 }
 
 // Устанавливаем тайтл сайта
