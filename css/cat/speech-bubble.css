@@ -1,0 +1,30 @@
+.speech-bubble {
+    position: absolute;
+    top: -80%; /* Позиція відносно батьківського елемента */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: auto; /* Динамічна висота */
+    padding: 15px;
+    background: linear-gradient(135deg, #fff, #f0f0f0);
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -25px; /* Трикутник нижче міхура */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 15px;
+    border-style: solid;
+    border-color: #f0f0f0 transparent transparent transparent;
+}

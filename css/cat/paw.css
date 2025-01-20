@@ -1,0 +1,70 @@
+/* Контейнер для лапки */
+.paw-container {
+    position: absolute;
+    bottom: 50%;
+    left: 75%; /* Регулируйте позицию */
+    transform: translate(-50%, 50%);
+}
+/* Лапка */
+.paw {
+    top: -5%;
+    position: absolute;
+    bottom: -5%; /* Положение лапки */
+    right: -30%; /* Сдвиг вправо */
+    width: 100px; /* Уменьшенный размер */
+    height: 120px; /* Уменьшенный размер */
+    border-radius: 50%; /* Овальная форма */
+    z-index: 10;
+    animation: wave 2s infinite ease-in-out; /* Анимация махания */
+}
+
+/* Анимация появления */
+.paw.show {
+    opacity: 1; /* Появление */
+    transform: scale(1); /* Увеличение до нормального размера */
+}
+
+/* Анимация исчезновения */
+.paw.hide {
+    opacity: 0; /* Исчезновение */
+    transform: scale(0.5); /* Уменьшение */
+}
+
+/* Пальцы */
+.toe {
+    position: absolute;
+    width: 30px; /* Уменьшенный размер */
+    height: 35px; /* Уменьшенный размер */
+    background: linear-gradient(145deg, #ffffff, #bfbfbf); /* 3D эффект с градиентом */
+    border-radius: 50%;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3), inset -3px -3px 6px rgba(255, 255, 255, 0.6); /* Внутренний 3D эффект */
+    top: 3px; /* Пропорционально уменьшено */
+}
+
+/* Расположение пальцев */
+.toe-1 {
+    top: 30%; /* Пропорционально уменьшено */
+    left: 15px; /* Пропорционально уменьшено */
+}
+.toe-2 {
+    top: 18%; /* Пропорционально уменьшено */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.toe-3 {
+    top: 30%; /* Пропорционально уменьшено */
+    right: 15px; /* Пропорционально уменьшено */
+}
+
+/* Центральная подушечка (овал) */
+.pad {
+    position: absolute;
+    bottom: 15px; /* Пропорционально уменьшено */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55px; /* Уменьшенный размер */
+    height: 55px; /* Уменьшенный размер */
+    background: linear-gradient(145deg, #ffffff, #bfbfbf); /* 3D эффект с градиентом */
+    border-radius: 50%; /* Овальная форма */
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3), inset -3px -3px 6px rgba(255, 255, 255, 0.6); /* Внутренний 3D эффект */
+}

@@ -1,0 +1,7 @@
+/* Центрирование кота для десктопной версии */
+@media (min-width: 601px) {
+    .cat-container {
+        margin: 0 auto; /* Горизонтальное центрирование */
+        position: relative;
+    }
+}

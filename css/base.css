@@ -1,0 +1,40 @@
+/* Загальний стиль для сторінки */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #333); /* Темний фон за замовчуванням */
+    color: #f5f5f5;
+    transition: 0.5s ease, color 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: 0.5s ease-in-out; 
+}
+
+/* Світлий режим */
+body.light-mode {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0); 
+    color: #000;
+}
+
+/* Версія сайту */
+.version-container {
+    position: absolute;
+    top: 0%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: rgba(0, 0, 0, 0.6); 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 10; 
+    font-weight: bold;
+    color: inherit;
+}

@@ -1,0 +1,43 @@
+/* Базовый рот (закрытый) */
+.cat .mouth {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px; /* Узкий рот */
+    height: 10px; /* Почти закрыт */
+    background: #d06;
+    border-radius: 50%; /* Овальная форма для губ */
+    overflow: hidden; /* Прячем язык */
+    transition: height 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
+}
+/* Язык внутри рта (скрыт по умолчанию) */
+.cat .tongue {
+    position: absolute;
+    bottom: -10px; /* Полностью скрыт */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    background: #f89;
+    border-radius: 50%;
+    transition: transform 0.3s ease, bottom 0.3s ease;
+}
+
+/* Разговаривающий рот */
+.cat.talking .mouth {
+    width: 50px; /* Расширяется при разговоре */
+    height: 30px; /* Открывается шире */
+    border-radius: 50% / 100%; /* Становится овальным */
+    animation: dynamicMouthTalk 0.8s infinite; /* Динамическое движение губ */
+}
+
+/* Анимация языка */
+.cat.talking .tongue {
+    bottom: 0; /* Язык выходит наружу */
+    animation: dynamicTongueTalk 0.8s infinite; /* Движение языка */
+}
+.cat-container.active .mouth {
+    width: 50px;
+    height: 20px;
+}

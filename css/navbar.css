@@ -1,0 +1,27 @@
+/* === Навбар === */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px; 
+    background: rgba(0, 0, 0, 0.8); /* Тёмний навбар по умолчанию */
+    backdrop-filter: blur(150px); /* Розмиття фону */
+    display: flex;
+    justify-content: center; /* Центрирование содержимого навбара */
+    align-items: center;
+    z-index: 1000; /* Високий рівень */
+    transition: 0.5s ease;
+}
+
+
+/* Светлый режим для навбара */
+body.light-mode nav {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Содержимое навбара */
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Расстояние между элементами */
+}

@@ -1,0 +1,54 @@
+/* Общий контейнер для усов */
+.cat .whiskers {
+    position: absolute;
+    top: 105px; /* Смещаем ближе к носу */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px; /* Общая ширина контейнера для усов */
+    height: 40px; /* Высота контейнера */
+    z-index: 1; /* Под носом */
+}
+
+/* Левые усы */
+.cat .whiskers .left {
+    position: absolute;
+    left: 0; /* Левые усы начинаются с левого края */
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background: #fff; /* Белый цвет усов */
+    transform-origin: right center;
+}
+
+/* Углы левых усов */
+.cat .whiskers .left:nth-child(1) {
+    transform: rotate(20deg); /* Верхний ус */
+}
+.cat .whiskers .left:nth-child(2) {
+    transform: rotate(0deg); /* Средний ус */
+}
+.cat .whiskers .left:nth-child(3) {
+    transform: rotate(-20deg); /* Нижний ус */
+}
+
+/* Правые усы */
+.cat .whiskers .right {
+    position: absolute;
+    right: 0; /* Правые усы начинаются с правого края */
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background: #fff; /* Белый цвет усов */
+    transform-origin: left center;
+}
+
+/* Углы правых усов */
+.cat .whiskers .right:nth-child(4) {
+    transform: rotate(-20deg); /* Верхний ус */
+}
+.cat .whiskers .right:nth-child(5) {
+    transform: rotate(0deg); /* Средний ус */
+}
+.cat .whiskers .right:nth-child(6) {
+    transform: rotate(20deg); /* Нижний ус */
+}

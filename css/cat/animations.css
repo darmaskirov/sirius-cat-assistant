@@ -1,0 +1,95 @@
+@keyframes earMove {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+/* Анимация левой брови */
+@keyframes browMoveLeft {
+    0%, 100% {
+        transform: rotate(0deg); /* Нейтральное положение */
+    }
+    50% {
+        transform: rotate(-15deg); /* Лёгкий наклон вниз */
+    }
+}
+
+/* Анимация правой брови */
+@keyframes browMoveRight {
+    0%, 100% {
+        transform: rotate(0deg); /* Нейтральное положение */
+    }
+    50% {
+        transform: rotate(15deg); /* Лёгкий наклон вниз */
+    }
+}
+/* Анимация моргания с полным закрытием */
+@keyframes blink {
+    0%, 95% {
+        height: 40px; /* Открытые глаза */
+    }
+    96% {
+        height: 2px; /* Полностью закрытые глаза */
+    }
+    100% {
+        height: 40px; /* Открытые глаза */
+    }
+}
+/* Анимация махания */
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+}
+
+/* Ключевые кадры для динамического движения рта */
+@keyframes dynamicMouthTalk {
+    0%, 100% {
+        width: 50px; /* Среднее положение */
+        height: 20px; /* Полуоткрытый рот */
+        border-radius: 50% / 80%; /* Естественная форма */
+    }
+    50% {
+        width: 40px; /* Узкое сужение */
+        height: 30px; /* Сильное открытие */
+        border-radius: 50% / 100%; /* Сильная овальная форма */
+    }
+}
+
+/* Ключевые кадры для языка */
+@keyframes dynamicTongueTalk {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0); /* Язык в нейтральной позиции */
+    }
+    50% {
+        transform: translateX(-50%) translateY(-2px); /* Лёгкое движение вверх */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes secondAnimation {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}

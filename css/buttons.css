@@ -1,0 +1,82 @@
+/* === Стилі контейнерів === */
+.all-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Прозорий чорний фон */
+    padding: 20px;
+    border-radius: 25px; /* Закруглені кути */
+    position: absolute; /* Змінено на absolute для забезпечення прокрутки */
+    top: 80%; /* Розташування по вертикалі */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрування по горизонталі */
+    width: 60%; /* Адаптивна ширина */
+    max-width: 600px; /* Максимальна ширина */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тінь для більшого акценту */
+    height: auto; /* Автоматична висота */
+    overflow-y: visible; /* Зробити вміст видимим */
+    max-height: none; /* Забрати обмеження висоти */
+}
+
+.buttons-container {
+    display: grid; /* Змінено на grid для двох рядів */
+    grid-template-columns: repeat(2, 1fr); /* Два стовпці */
+    gap: 10px;
+    justify-content: center; /* Вирівнювання по центру */
+    justify-items: center;
+    align-items: center; /* Вирівнювання по центру */
+    width: 70%;
+}
+
+/* === Стилі кнопок === */
+.action-button {
+    width: 100%;
+    max-width: 200px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #333333; /* Строгий темний фон */
+    border: 2px solid #555555; /* Строгі обводи */
+    border-radius: 8px; /* Помірно закруглені кути */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Анімація */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:hover {
+    background-color: #555555; /* Зміна кольору при наведенні */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); /* Легка підняття при наведенні */
+}
+
+.action-button:active {
+    transform: translateY(2px); /* Легка зміна позиції при натисканні */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Для великих кнопок */
+.action-button.large {
+    width: 90%;
+    max-width: 250px;
+    padding: 14px 20px;
+    font-size: 16px;
+}
+
+/* Для адаптивності */
+@media (max-width: 768px) {
+    .action-button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .action-button.large {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+}
+
+
+

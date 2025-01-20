@@ -1,0 +1,36 @@
+/* Контейнер для бровей */
+.cat .brows {
+    position: absolute;
+    top: 40px; /* Расположение выше глаз */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Ширина контейнера */
+    height: 20px;
+    z-index: 2; /* Выше глаз */
+}
+
+/* Левая бровь */
+.cat .brows .left {
+    position: absolute;
+    top: 0;
+    left: -5px; /* Точное размещение над левым глазом */
+    width: 40px;
+    height: 3.7px; /* Толщина брови */
+    background: #fff; /* Белый цвет брови */
+    border-radius: 2px; /* Закруглённые края */
+    transform-origin: left center;
+    animation: browMoveLeft 5s infinite ease-in-out;
+}
+
+/* Правая бровь */
+.cat .brows .right {
+    position: absolute;
+    top: 0;
+    right: 5px; /* Точное размещение над правым глазом */
+    width: 40px;
+    height: 3.7px; /* Толщина брови */
+    background: #fff; /* Белый цвет брови */
+    border-radius: 2px; /* Закруглённые края */
+    transform-origin: right center;
+    animation: browMoveRight 5s infinite ease-in-out;
+}

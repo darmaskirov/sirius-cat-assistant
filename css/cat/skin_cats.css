@@ -1,0 +1,15 @@
+.style1 .cat {
+    background: linear-gradient(to bottom, #4a4a4a, #000);
+}
+.style2 .cat {
+    background: linear-gradient(to bottom, #f06, #800);
+}
+.style3 .cat {
+    background: linear-gradient(to bottom, #ff9a00, #ff3b00);
+}
+.style4 .cat {
+    background: linear-gradient(to bottom, #2e8b57, #006400);
+}
+.style5 .cat {
+    background: linear-gradient(to bottom, #1e90ff, #0000cd);
+}

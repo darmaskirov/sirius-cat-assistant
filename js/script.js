@@ -11,6 +11,9 @@ const styleButtons = document.querySelectorAll('.style-buttons-container .action
 const paw = document.getElementById("paw");
 const showPawButton = document.getElementById("showPawButton");
 
+const saySomethingButton = document.getElementById('say-something-button');
+const speechBubble = document.querySelector('.speech-bubble');
+
 // Добавляем обработчик события на кнопку
 showPawButton.addEventListener("click", () => {
     // Показываем лапку
@@ -28,48 +31,6 @@ styleButtons.forEach(button => {
         document.body.className = styleClass; // Устанавливаем стиль для body
     });
 });
-
-const phrases = [
-    "Привет, друг!", 
-    "Как у тебя дела?", 
-    "Муррр, я счастлив!", 
-    "Смотри, какая классная погода!", 
-    "АХАХАХАХАХАХАХХА!", 
-    "Я КОТ ЧТОООО???!"
-];
-
-const saySomethingButton = document.getElementById('say-something-button');
-const speechBubble = document.querySelector('.speech-bubble');
-
-saySomethingButton.addEventListener('click', () => {
-    const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-    speechBubble.textContent = randomPhrase;
-    speechBubble.style.display = 'block';
-
-    setTimeout(() => {
-        speechBubble.style.display = 'none';
-    }, 10000); // Показ фразы на 3 секунды
-});
-
-// Указываем версию сайта, тайтл и ссылку на иконку
-const version = "v1.2.5a";
-const siteTitle = "SiriusCat";
-const faviconURL = "https://cdn-icons-png.flaticon.com/512/25/25694.png"; // Ссылка на иконку кота
-
-// Устанавливаем версию на странице
-const versionContainer = document.getElementById('site-version');
-if (versionContainer) {
-    versionContainer.textContent = `Версія: ${version}`;
-}
-
-// Устанавливаем тайтл сайта
-document.title = `${siteTitle} (${version})`;
-
-// Устанавливаем иконку сайта
-const favicon = document.createElement('link');
-favicon.rel = 'icon';
-favicon.href = faviconURL;
-document.head.appendChild(favicon);
 
 
 // Функция для запуска разговора
@@ -180,22 +141,4 @@ function startDynamicTalkingAnimation() {
 document.getElementById('talk-button').addEventListener('click', startDynamicTalkingAnimation);
 
 
-// Получаем элемент иконки
-const themeIcon = document.getElementById('theme-icon');
 
-// Установка начальной темы
-let isDarkMode = true;
-
-// Функция переключения темы
-themeIcon.addEventListener('click', () => {
-    if (isDarkMode) {
-        document.body.classList.remove('dark-mode');
-        document.body.classList.add('light-mode');
-        themeIcon.src = "https://cdn-icons-png.flaticon.com/512/869/869853.png"; // Иконка луны для светлой темы
-    } else {
-        document.body.classList.remove('light-mode');
-        document.body.classList.add('dark-mode');
-        themeIcon.src = "https://cdn-icons-png.flaticon.com/512/869/869869.png"; // Иконка солнца для тёмной темы
-    }
-    isDarkMode = !isDarkMode; // Переключаем состояние
-});

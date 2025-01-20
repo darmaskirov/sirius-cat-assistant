@@ -1,0 +1,61 @@
+.cat {
+    position: absolute;
+    top: -45%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #4a4a4a, #000);
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.3), 5px 5px 15px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+}
+.cat-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    perspective: 800px;
+}
+.cat .pupil {
+    clip-path: circle(50% at 50% 50%); 
+    transition: transform 0.1s ease-out;
+}
+
+.cat.second-animation {
+    animation: secondAnimation 2s ease-in-out;
+}
+
+.ears-container {
+    position: absolute;
+    left: 0;
+    top: -55%;
+    width: 100%;
+    height: 80px;
+    z-index: -1;
+}
+.ears-container .ear {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(to bottom, #4a4a4a, #2a2a2a);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: earMove 3s infinite;
+    transform-origin: bottom center;
+    overflow: hidden; 
+}
+.ears-container .ear::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit; 
+    border-radius: 30%; 
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.ears-container .ear.left {
+    left: 20px;
+    transform: rotate(-20deg);
+}
+.ears-container .ear.right {
+    right: 20px;
+    transform: rotate(20deg);
+}
+
