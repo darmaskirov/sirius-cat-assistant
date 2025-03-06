@@ -5,3 +5,30 @@
         position: relative;
     }
 }
+
+@media (min-width: 390px)
+{
+    .cat-container {
+        margin: 0 auto; /* Горизонтальное центрирование */
+        position: relative;
+        top: 50%;
+    }
+}
+
+@media (min-width: 375px)
+{
+    .cat-container {
+        margin: 0 auto; /* Горизонтальное центрирование */
+        position: relative;
+        top: 50%;
+    }
+}
+
+@media (min-width: 430px)
+{
+    .cat-container {
+        margin: 0 auto; /* Горизонтальное центрирование */
+        position: relative;
+        top: 50%;
+    }
+}

@@ -2,7 +2,7 @@
 const navbar = document.querySelector('nav');
 
 // Початковий стан навбару (відключений)
-navbar.style.display = 'none';
+navbar.style.display = 'flex';
 
 // Функція для увімкнення/вимкнення навбару
 function toggleNavbar() {

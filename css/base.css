@@ -1,17 +1,17 @@
 /* Загальний стиль для сторінки */
 body {
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    padding: 3%;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1a1a1a, #333); /* Темний фон за замовчуванням */
+    background: linear-gradient(135deg, #1a1a1a, #333);
     color: #f5f5f5;
-    transition: 0.5s ease, color 0.5s ease;
+    /* Прибираємо занадто "жорсткий" флекс-центр.
+       Якщо потрібно центрувати певний контент – краще
+       обгорнути його додатковим контейнером. */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    transition: 0.5s ease-in-out; 
+    min-height: 100vh;
+    transition: 0.5s ease-in-out, color 0.5s ease; 
 }
 
 /* Світлий режим */
@@ -22,19 +22,35 @@ body.light-mode {
 
 /* Версія сайту */
 .version-container {
-    position: absolute;
+    /* Якщо треба "пришпилити" зверху по центру,
+       можна використати position: fixed або абсолют з top=0,
+       проте на маленьких екранах це часто з’їжджає.
+       Тому краще зробити адаптивно через медіа-запит. */
+    position: fixed;
     top: 0%; 
-    left: 50%; 
     transform: translate(-50%, -50%); 
     background: rgba(0, 0, 0, 0.6); 
-    color: white;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     border-radius: 8px;
     font-size: 16px;
-    font-family: Arial, sans-serif;
+    font-weight: bold;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     text-align: center;
     z-index: 10; 
-    font-weight: bold;
-    color: inherit;
+    color: inherit; /* Використовуємо колір body */
+}
+
+/* Підвал сайту */
+#footer {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    left: 0;           /* Прив’язка до лівого краю вікна */
+    bottom: 0;         /* Прив’язка до нижньої межі вікна */
+    
 }

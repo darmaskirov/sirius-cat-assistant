@@ -1,6 +1,5 @@
 .speech-bubble {
     position: absolute;
-    top: -80%; /* Позиція відносно батьківського елемента */
     left: 50%;
     transform: translateX(-50%);
     width: 160px;

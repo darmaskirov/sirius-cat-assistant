@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="application/javascript" src="vosk.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="wrapper">
+        
+        <div>
+            
+            <select id="irenemode" style="display: none;">
+                <option value="saytxt">saytxt</option>
+            </select>
+            <br />
+            <button id="trigger" type="button">Слухати</button>
+            <div>
+
+                <div id="speech-cloud">
+                    <span id="recognition-result">Тут з'явиться розпізнаний текст</span>
+
+                
+                <span id="partial" style="color: #666666;"></span>
+            </div>
+        </div>
+        
+        <!-- Вікно для тексту -->
+        <div id="comic-dialog" class="dialog-bubble"></div>
+    </div>
+    
+    <!-- Полотно для малювання -->
+   
+    
+    <!-- Підключення скриптів -->
+    
+    
+    <script src="index.js" defer></script>
+    <script src="scriptTouchCAT.js" defer></script>
+
+</body>
+</html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiriusCat <script>{version}</script></title>
+    
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav>
+
+    </nav>
+
+
+    <!-- Контейнер для кота -->
+    <div class="cat-container" id="cat-container">
+        <div class="ears-container">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+        </div>
+        <div class="cat">
+            <!-- Усы -->
+            <div class="whiskers">
+                <!-- Левые усы -->
+                <div class="left"></div>
+                <div class="left"></div>
+                <div class="left"></div>
+                <!-- Правые усы -->
+                <div class="right"></div>
+                <div class="right"></div>
+                <div class="right"></div>
+            </div>
+            <!-- Левое ухо -->
+            <div class="ear left"></div>
+            <!-- Правое ухо -->
+            <div class="ear right"></div>
+                <!-- Брови -->
+            <div class="brows">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <!-- Левый глаз -->
+            <div class="eye left">
+                <div class="pupil"></div>
+            </div>
+            <!-- Правый глаз -->
+            <div class="eye right">
+                <div class="pupil"></div>
+            </div>
+            <!-- Нос -->
+            <div class="nose">
+
+            </div>
+            <!-- Рот -->
+            <div class="mouth">
+                <div class="tongue"></div>
+            </div>
+            
+        </div>
+
+    <div class="whiskers">
+        <!-- Левые усы -->
+        <div class="left"></div>
+        <div class="left"></div>
+        <div class="left"></div>
+        <!-- Правые усы -->
+        <div class="right"></div>
+        <div class="right"></div>
+        <div class="right"></div>
+    </div>
+        <div class="ears-container">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+        </div>
+        <!-- Лапка -->
+        <div class="paw" id="paw" style="display: none;">
+            <!-- Пальцы -->
+            <div class="toe toe-1"></div>
+            <div class="toe toe-2"></div>
+            <div class="toe toe-3"></div>
+            <!-- Центральная подушечка -->
+            <div class="pad"></div>
+        </div>
+        <!-- Облако речи -->
+        <div class="speech-bubble">Мяу!</div>
+    </div>
+
+    <div class="all-buttons-container">
+        <div class="buttons-container">
+            <div class="icon-container">
+                <!-- Иконка для переключения тем -->
+                <button alt="Switch Theme" id="theme-icon" class="action-button">Змінити тему</button>
+            </div>
+            <button id="talk-button" class="action-button">Розмовляти</button>
+            <button id="animation-button" class="action-button">Анімація</button>
+            <button id="say-something-button" class="action-button">Сказати що небудь</button>
+             <!-- Кнопка для появления лапки -->
+            <button id="showPawButton" class="action-button">Помахати лапкою</button>
+            <div class="version-container">
+                <span id="site-version"></span>
+            </div>
+        </div>
+        <br>
+        <!--<div class="background-buttons">
+            <button class="bg-button" data-bg="gradient1">Фон 1</button>
+            <button class="bg-button" data-bg="gradient2">Фон 2</button>
+            <button class="bg-button" data-bg="gradient3">Фон 3</button>
+            <button class="bg-button" data-bg="gradient4">Фон 4</button>
+            <button class="bg-button" data-bg="gradient5">Фон 5</button>
+            <button class="bg-button" data-bg="gradient6">Фон 6</button>
+        </div>-->
+        <br>
+        <!--<div class="style-buttons-container">
+            <button class="action-button" data-style="style1">Стиль 1</button>
+            <button class="action-button" data-style="style2">Стиль 2</button>
+            <button class="action-button" data-style="style3">Стиль 3</button>
+        </div>-->
+    </div>
+
+    
+    </body>
+    
+</html>

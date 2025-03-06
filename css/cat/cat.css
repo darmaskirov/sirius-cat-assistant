@@ -1,6 +1,6 @@
 .cat {
     position: absolute;
-    top: -45%;
+    top: 45%;
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, #4a4a4a, #000);
@@ -26,7 +26,7 @@
 .ears-container {
     position: absolute;
     left: 0;
-    top: -55%;
+    top: 40%;
     width: 100%;
     height: 80px;
     z-index: -1;

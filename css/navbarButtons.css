@@ -1,0 +1,20 @@
+.navButton
+{
+    width: 50px;
+    color: rgb(0, 0, 0);
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 25px solid red;
+}
+
+a .navA
+{
+    width: 50px;
+    color: aqua;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 25px solid red;
+}
+

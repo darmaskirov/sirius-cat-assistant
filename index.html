@@ -12,15 +12,20 @@
     <link rel="stylesheet" href="css/skin_cats.css">
     <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="css/modal_window.css">
+    <link rel="stylesheet" href="css/navbarButtons.css">
+    <link rel="stylesheet" href="css/clock.css">
 </head>
 <body>
-    <nav></nav>
-    <div id="loading-screen">
+    <nav>
+            <button id="closeAdm" class="action-button">ADM</button>
+            <button id="closeAdm" class="action-button">Керування домом 🏠</button>
+    </nav>
+    <!-- <div id="loading-screen">
         <div class="loading-content">
             <div class="loading-text">Завантаження...</div>
             <div class="loading-percentage" id="percentage">0%</div>
         </div>
-    </div>
+    </div> -->
     <!-- Контейнер кота -->
     <div class="cat-container" id="cat-container">
         <!-- Вуха кота -->
@@ -73,8 +78,18 @@
     <!-- Блок з кнопками -->
     <div class="all-buttons-container">
         <h1>Адмін панель</h1>
-        <span id="site-version"></span>
+        <!-- <span id="site-version"><script>`Версія: ${version}`</script></span> -->
         <div class="buttons-container">
+            <!-- Повзунок для масштабу -->
+            <label for="scaleSlider">Змінити масштаб кота:</label>
+            <input 
+            type="range" 
+            id="scaleSlider" 
+            min="0.5" 
+            max="2" 
+            step="0.1" 
+            value="1"
+            />
             <!-- Кнопка зміни теми -->
 
                 <button id="theme-icon" class="action-button">Змінити тему</button>
@@ -85,16 +100,34 @@
             <button id="say-something-button" class="action-button">Сказати що небудь</button>
             <button id="showPawButton" class="action-button">Помахати лапкою</button>
             <button id="toggle-navbar-button" class="action-button">Прибрати Navbar</button>
-
+            <button id="playButton-1" class="action-button">Помурчи 😺</button>
+            <button id="playButton" class="action-button">Мяукни 😺</button>
+            <button id="playNotification" class="action-button">Відтворити Сповіщення 🎶</button>
+            <button id="playNotification-1" class="action-button">Відтворити Сповіщення 1 🎶</button>
+            <button id="playNotification-2" class="action-button">Відтворити Сповіщення 2 🎶</button>
+            <button id="playNotification-3" class="action-button">Відтворити Сповіщення 3 🎶</button>
+            <audio id="sound" src="sounds/meow_1.mp3"></audio>
+            <audio id="sound-1" src="sounds/purring_cat_1.mp3"></audio>
+            <audio id="Notification" src="sounds/notification_1.mp3"></audio>
+            <audio id="Notification-1" src="sounds/notification_2.mp3"></audio>
+            <audio id="Notification-2" src="sounds/notification_3.mp3"></audio>
+            <audio id="Notification-3" src="sounds/notification_4.mp3"></audio>
         </div>
     </div>
-
+    <footer id="footer">
+        <!-- <span id="site-version"><script>`Версія: ${version}`</script></span> -->
+        <div id="clock"></div>
+    </footer>
     <script src="js/script.js"></script>
     <script src="js/catStyles.js"></script>
-    <script src="js/LoadScreen.js"></script>
-    <script src="js/version.js"></script>
+    <!-- <script src="js/LoadScreen.js"></script> -->
     <script src="js/catPhrases.js"></script>
     <script src="js/changeTheme.js"></script>
     <script src="js/ToggleNavbar.js"></script>
+    <script src="js/playSound.js"></script>
+    <script src="js/scaleSlider.js"></script>
+    <script src="js/version.js"></script>
+    <script src="js/toggleAdminPanel.js"></script>
+    <script src="js/seeClock.js"></script>
 </body>
 </html>

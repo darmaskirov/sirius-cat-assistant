@@ -1,15 +1,15 @@
-/* === Навбар === */
 nav {
     position: fixed;
     top: 0;
+    left: 0; /* Додаємо для точного вирівнювання */
     width: 100%;
     height: 60px; 
-    background: rgba(0, 0, 0, 0.8); /* Тёмний навбар по умолчанию */
-    backdrop-filter: blur(150px); /* Розмиття фону */
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(150px);
     display: flex;
-    justify-content: center; /* Центрирование содержимого навбара */
+    justify-content: center;
     align-items: center;
-    z-index: 1000; /* Високий рівень */
+    z-index: 1000;
     transition: 0.5s ease;
 }
 
@@ -24,4 +24,14 @@ body.light-mode nav {
     display: flex;
     align-items: center;
     gap: 15px; /* Расстояние между элементами */
+}
+
+.ul
+{
+
+}
+
+.li
+{
+    
 }

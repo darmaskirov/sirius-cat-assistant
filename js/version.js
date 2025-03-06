@@ -1,19 +1,19 @@
-// Указываем версию сайта, тайтл и ссылку на иконку
-const version = "v1.2.5a";
-const siteTitle = "SiriusCat!!";
-const faviconURL = "./css/favicons/favicon-1.png"; // Ссылка на иконку кота
+// Конфігурація
+const version = "v1.3.2";
+const siteTitle = "SiriusCat";
+const faviconURL = "./css/favicons/favicon-1.png";
 const favicon = document.createElement('link');
 
-// Устанавливаем версию на странице
+// Встановленння версії на сторінці
 const versionContainer = document.getElementById('site-version');
 if (versionContainer) {
     versionContainer.textContent = `Версія: ${version}`;
 }
 
-// Устанавливаем тайтл сайта
+// Заголовок сайту
 document.title = `${siteTitle} (${version})`;
 
-// Устанавливаем иконку сайта
+// Іконка сайту
 
 favicon.rel = 'icon';
 favicon.href = faviconURL;
