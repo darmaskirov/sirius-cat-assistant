@@ -1,4 +1,4 @@
-# 🐱 Sirius Cat (Alpha)
+# 🐱 Sirius Cat Assistant (Alpha)
 
 Альфа-версія інтерактивного веб-асистента у вигляді котика 🐾  
 Цей проект об’єднує **анімації**, **адмін панель** та ідею майбутнього AI-помічника.  
@@ -20,24 +20,36 @@
 - JavaScript (анімації, інтерактивність, адмін панель)
 - (майбутнє) AI / API для голосових команд
 
+---
+
+## 🤖 AI Generated Notice
+
+![AI Generated](https://img.shields.io/badge/AI-Generated-8A2BE2?style=for-the-badge&logo=OpenAI&logoColor=white)
+
 > ⚠️ Це **альфа-версія**, в якій поки що немає інтеграції AI.  
 > Позначка **AI-Generated** означає, що проект було створено **за допомогою ШІ-інструментів** (генерація коду, опису, дизайну).  
 > Сам асистент наразі працює як **демо-прототип**.
 
 ---
 
-###  🖥️ Адмін панель  
-![Admin Panel](https://github.com/darmaskirov/sirius-cat-assistant/blob/main/Screenshot_23.png?raw=true)
+## 📸 Скриншоти
 
-###  🐱 Анімації кота  
-![Cat Animation](https://github.com/darmaskirov/sirius-cat-assistant/blob/main/Screenshot_24.png)
+### 🖥️ Адмін панель
+![Admin Panel](screenshots/1.png)
 
-###  🎤 Репліки кота  
-![Cat Talking](https://github.com/darmaskirov/sirius-cat-assistant/blob/main/Screenshot_26.png)
+### 🐱 Анімації кота
+![Cat Animation](screenshots/2.png)
+
+### 🎤 Репліки кота
+![Cat Talking](screenshots/3.png)
+
+### 🐾 Інший екран
+![Extra](screenshots/4.png)
 
 ---
 
 ## 🛠️ Встановлення
 ```bash
-git clone https://github.com/your-username/sirius-cat-ai-assistant-alpha.git
-cd sirius-cat-ai-assistant-alpha
+git clone https://github.com/your-username/sirius-cat-assistant-alpha.git
+cd sirius-cat-assistant-alpha
+
